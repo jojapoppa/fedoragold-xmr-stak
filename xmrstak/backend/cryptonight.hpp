@@ -16,7 +16,8 @@ enum xmrstak_algo
 	cryptonight_masari = 8, //equal to cryptonight_monero but with less iterations, used by masari
 	cryptonight_haven = 9, // equal to cryptonight_heavy with a small tweak
 	cryptonight_bittube2 = 10, // derived from cryptonight_heavy with own aes-round implementation and minor other tweaks
-	cryptonight_monero_v8 = 11
+	cryptonight_monero_v8 = 11,
+	cryptonight_fedg = 12 // equal to regular cryptonight + tweak for FedoraGold(FED)
 };
 
 // define aeon settings
@@ -39,6 +40,9 @@ inline constexpr size_t cn_select_memory() { return 0; }
 
 template<>
 inline constexpr size_t cn_select_memory<cryptonight>() { return CRYPTONIGHT_MEMORY; }
+
+template<>
+inline constexpr size_t cn_select_memory<cryptonight_fedg>() { return CRYPTONIGHT_MEMORY; }
 
 template<>
 inline constexpr size_t cn_select_memory<cryptonight_lite>() { return CRYPTONIGHT_LITE_MEMORY; }
@@ -78,6 +82,7 @@ inline size_t cn_select_memory(xmrstak_algo algo)
 	case cryptonight_monero:
 	case cryptonight_monero_v8:
 	case cryptonight_masari:
+	case cryptonight_fedg:
 	case cryptonight:
 		return CRYPTONIGHT_MEMORY;
 	case cryptonight_ipbc:
@@ -98,6 +103,9 @@ inline constexpr uint32_t cn_select_mask() { return 0; }
 
 template<>
 inline constexpr uint32_t cn_select_mask<cryptonight>() { return CRYPTONIGHT_MASK; }
+
+template<>
+inline constexpr uint32_t cn_select_mask<cryptonight_fedg>() { return CRYPTONIGHT_MASK; }
 
 template<>
 inline constexpr uint32_t cn_select_mask<cryptonight_lite>() { return CRYPTONIGHT_LITE_MASK; }
@@ -137,6 +145,7 @@ inline size_t cn_select_mask(xmrstak_algo algo)
 	case cryptonight_monero:
 	case cryptonight_monero_v8:
 	case cryptonight_masari:
+        case cryptonight_fedg:
 	case cryptonight:
 		return CRYPTONIGHT_MASK;
 	case cryptonight_ipbc:
@@ -157,6 +166,9 @@ inline constexpr uint32_t cn_select_iter() { return 0; }
 
 template<>
 inline constexpr uint32_t cn_select_iter<cryptonight>() { return CRYPTONIGHT_ITER; }
+
+template<>
+inline constexpr uint32_t cn_select_iter<cryptonight_fedg>() { return CRYPTONIGHT_ITER; }
 
 template<>
 inline constexpr uint32_t cn_select_iter<cryptonight_lite>() { return CRYPTONIGHT_LITE_ITER; }
@@ -195,6 +207,7 @@ inline size_t cn_select_iter(xmrstak_algo algo)
 	case cryptonight_stellite:
 	case cryptonight_monero:
 	case cryptonight_monero_v8:
+	case cryptonight_fedg:
 	case cryptonight:
 		return CRYPTONIGHT_ITER;
 	case cryptonight_ipbc:

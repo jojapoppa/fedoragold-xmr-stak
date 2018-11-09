@@ -48,6 +48,7 @@ Besides [Monero](https://getmonero.org), following coins can be mined using this
 - [QRL](https://theqrl.org)
 - **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo**
 - [TurtleCoin](https://turtlecoin.lol)
+- [FedoraGold](https://fedoragold.com)
 
 Ryo currency is a way for us to implement the ideas that we were unable to in
 Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
@@ -64,6 +65,7 @@ If your prefered coin is not listed, you can choose one of the following algorit
     - cryptonight_v7
     - cryptonight_v7_stellite
     - cryptonight_v8
+    - cryptonight_fedg
 - 4MiB scratchpad memory
     - cryptonight_haven
     - cryptonight_heavy

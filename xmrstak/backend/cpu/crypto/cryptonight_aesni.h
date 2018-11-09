@@ -45,7 +45,7 @@ extern "C"
 {
 	void keccak(const uint8_t *in, int inlen, uint8_t *md, int mdlen);
 	void keccakf(uint64_t st[25], int rounds);
-	extern void(*const extra_hashes[4])(const void *, uint32_t, char *);
+	extern void(*const extra_hashes[8])(const void *, uint32_t, char *);
 }
 
 // This will shift and xor tmp1 into itself as 4 32-bit vals such as
@@ -732,7 +732,7 @@ inline void set_float_rounding_mode()
 	cn_implode_scratchpad<MEM, SOFT_AES, PREFETCH, ALGO>((__m128i*)ctx[n]->long_state, (__m128i*)ctx[n]->hash_state); \
 	/* Optim - 99% time boundary */ \
 	keccakf((uint64_t*)ctx[n]->hash_state, 24); \
-	extra_hashes[ctx[n]->hash_state[0] & 3](ctx[n]->hash_state, 200, (char*)output + 32 * n)
+	extra_hashes[ctx[n]->hash_state[0] & 7](ctx[n]->hash_state, 200, (char*)output + 32 * n)
 
 //! defer the evaluation of an macro
 #ifndef _MSC_VER
@@ -966,7 +966,7 @@ struct Cryptonight_hash_asm<1, asm_version>
 
 		cn_implode_scratchpad<MEM, false, false, ALGO>((__m128i*)ctx[0]->long_state, (__m128i*)ctx[0]->hash_state);
 		keccakf((uint64_t*)ctx[0]->hash_state, 24);
-		extra_hashes[ctx[0]->hash_state[0] & 3](ctx[0]->hash_state, 200, (char*)output);
+		extra_hashes[ctx[0]->hash_state[0] & 7](ctx[0]->hash_state, 200, (char*)output);
 	}
 };
 
@@ -996,7 +996,7 @@ struct Cryptonight_hash_asm<2, 0>
 			cn_implode_scratchpad<MEM, false, false, ALGO>((__m128i*)ctx[i]->long_state, (__m128i*)ctx[i]->hash_state);
 			/* Optim - 99% time boundary */
 			keccakf((uint64_t*)ctx[i]->hash_state, 24);
-			extra_hashes[ctx[i]->hash_state[0] & 3](ctx[i]->hash_state, 200, (char*)output + 32 * i);
+			extra_hashes[ctx[i]->hash_state[0] & 7](ctx[i]->hash_state, 200, (char*)output + 32 * i);
 		}
 	}
 };
