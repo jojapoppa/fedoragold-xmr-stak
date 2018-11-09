@@ -72,7 +72,9 @@ void do_skein_hash(const void* input, uint32_t len, char* output) {
 	skein_hash(8 * 32, (const uint8_t*)input, 8 * len, (uint8_t*)output);
 }
 
-void (* const extra_hashes[8])(const void *, uint32_t, char *) = 
+void (* const extra_hashes[4])(const void *, uint32_t, char *) = {do_blake_hash, do_groestl_hash, do_jh_hash, do_skein_hash};
+
+void (* const extra_hashes_fedg[8])(const void *, uint32_t, char *) = 
 {
     do_jh_hash, do_skein_hash, do_blake_hash, do_groestl_hash, 
     do_blake_hash, do_groestl_hash, do_jh_hash, do_skein_hash
