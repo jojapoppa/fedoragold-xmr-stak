@@ -91,7 +91,7 @@ xmrstak::coin_selection coins[] = {
 	{ "bbscoin",             {cryptonight_aeon, cryptonight_aeon, 0u},            {cryptonight_aeon, cryptonight_aeon, 0u}, nullptr },
 	{ "bittube",             {cryptonight_heavy, cryptonight_bittube2, 255u},     {cryptonight_heavy, cryptonight_heavy, 0u},"mining.bit.tube:13333"},
 	{ "cryptonight",         {cryptonight_monero_v8, cryptonight, 255u},          {cryptonight_monero_v8, cryptonight_monero_v8, 0u}, nullptr },
-        { "cryptonight_fedg",    {cryptonight_monero_v8, cryptonight_fedg, 255u},     {cryptonight_monero_v8, cryptonight_monero_v8, 0u}, nullptr },
+        { "fedoragold",          {cryptonight_fedg, cryptonight_fedg, 255u},          {cryptonight_fedg, cryptonight_fedg, 0u}, "fedg.youpool.io:3367"},
 	{ "cryptonight_bittube2",{cryptonight_heavy, cryptonight_bittube2, 255u},     {cryptonight_heavy, cryptonight_heavy, 0u},nullptr},
 	{ "cryptonight_masari",  {cryptonight_monero_v8, cryptonight_masari, 255u},   {cryptonight_monero_v8, cryptonight_monero_v8, 0u},nullptr },
 	{ "cryptonight_haven",   {cryptonight_heavy, cryptonight_haven, 255u},        {cryptonight_heavy, cryptonight_heavy, 0u},   nullptr },

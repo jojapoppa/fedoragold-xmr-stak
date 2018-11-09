@@ -32,6 +32,7 @@ POOLCONF],
  *    qrl - Quantum Resistant Ledger
  *    ryo
  *    turtlecoin
+ *    fedoragold
  *
  * Native algorithms which not depends on any block versions:
  *
@@ -47,6 +48,7 @@ POOLCONF],
  *    cryptonight_bittube2
  *    cryptonight_haven
  *    cryptonight_heavy
+ *    cryptonight_fedg
  */
 
 "currency" : "CURRENCY",
