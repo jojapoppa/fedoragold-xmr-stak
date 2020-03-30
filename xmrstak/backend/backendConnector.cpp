@@ -21,6 +21,8 @@
   *
   */
 
+#define CL_TARGET_OPENCL_VERSION 220
+
 #include "iBackend.hpp"
 #include "backendConnector.hpp"
 #include "miner_work.hpp"

@@ -1,0 +1,2 @@
+/usr/bin/ar qc bin/libxmr-stak-asm.a  CMakeFiles/xmr-stak-asm.dir/backend/cpu/crypto/asm/cryptonight_v8_main_loop.S.o
+/usr/bin/ranlib bin/libxmr-stak-asm.a

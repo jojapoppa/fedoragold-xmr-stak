@@ -1,0 +1,12 @@
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmrstak_cuda_backend.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmr-stak-asm.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmr-stak.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/edit_cache.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmrstak_opencl_backend.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmr-stak-backend.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/xmr-stak-c.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/rebuild_cache.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/install/strip.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/list_install_components.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/install.dir
+/home/jojapoppa/fedoragold-xmr-stak/xmrstak/CMakeFiles/install/local.dir
