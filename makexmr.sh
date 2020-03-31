@@ -10,7 +10,8 @@
 
 #make clean
 
-cmake .. -DXMR-STAK_COMPILE=generic 
+#CUDA does not complile on my DEBIAN for some reason - return to that later...
+cmake .. -DXMR-STAK_COMPILE=generic -DCUDA_ENABLE=OFF
 make
   # optionall add install
 
