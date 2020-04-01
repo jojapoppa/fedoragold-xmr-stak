@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#mac osx
+from build...
+cmake -DXMR-STAK_COMPILE=generic -DOpenCL_ENABLE=OFF -DCUDA_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF -DOpenSSL_ENABLE=OFF -DCMAKE_BUILD_TYPE=Release ..
+make
+
 #sudo apt install nvidia-cuda-toolkit --fix-missing
 #sudo apt-get install libmicrohttpd-dev
 #sudo apt-get install hwloc
