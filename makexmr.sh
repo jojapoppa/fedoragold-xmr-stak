@@ -1,13 +1,15 @@
 #!/bin/sh
 
 #mac osx
-from build...
+
+Run from build!! folder
+#from build...
 
 # -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl  (or some local folder...)
 # May need this for Catalina support!!
 
 
-cmake -DXMR-STAK_COMPILE=generic -DOpenCL_ENABLE=OFF -DCUDA_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF -DOpenSSL_ENABLE=OFF -DCMAKE_BUILD_TYPE=Release ..
+cmake -DHWLOC_ENABLE=OFF -DXMR-STAK_COMPILE=generic -DOpenCL_ENABLE=OFF -DCUDA_ENABLE=OFF -DMICROHTTPD_ENABLE=OFF -DOpenSSL_ENABLE=OFF -DCMAKE_BUILD_TYPE=Release ..
 make
 
 
