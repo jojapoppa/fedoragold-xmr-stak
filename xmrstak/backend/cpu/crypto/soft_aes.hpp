@@ -110,12 +110,28 @@ static inline uint32_t sub_word(uint32_t key)
 		 saes_sbox[key & 0xff];
 }
 
-#ifdef __clang__
-static inline uint32_t _rotr(uint32_t value, uint32_t amount)
-{
-	return (value >> amount) | (value << ((32 - amount) & 31));
-}
-#endif
+//unsigned _arrotr (unsigned val,int shift)
+//{
+//        register unsigned lobit;        /* non-zero means lo bit set */
+//        register unsigned num = val;    /* number to rotate */
+//
+//        shift &= 0x1f;                  /* modulo 32 -- this will also make
+//                                           negative shifts work */
+//        while (shift--) {
+//                lobit = num & 1;        /* get high bit */
+//                num >>= 1;              /* shift right one bit */
+//                if (lobit)
+//                        num |= 0x80000000;  /* set hi bit if lo bit was set */
+//        }
+//        return num;
+//}
+//
+//#ifdef __clang__
+//static inline uint32_t _rotr(uint32_t value, uint32_t amount)
+//{
+//	return (value >> amount) | (value << ((32 - amount) & 31));
+//}
+//#endif
 
 static inline __m128i soft_aeskeygenassist(__m128i key, uint8_t rcon)
 {
