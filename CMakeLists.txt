@@ -50,7 +50,7 @@ else()
 endif()
 
 # option to add static libgcc and libstdc++
-option(CMAKE_LINK_STATIC "link as much as possible libraries static" OFF)
+option(CMAKE_LINK_STATIC "link as much as possible libraries static" ON)
 
 ################################################################################
 # Find CUDA
